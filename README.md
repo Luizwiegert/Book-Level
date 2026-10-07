@@ -2,10 +2,9 @@
 
 Gamificação de hábitos de leitura em React Native — XP, níveis, streaks e grupos, com Firebase como backend.
 
-<!--
-  📸 ADICIONE AQUI 2-4 SCREENSHOTS OU UM GIF DO APP RODANDO.
-  Isso pesa mais do que qualquer parágrafo de texto neste README.
--->
+<p align="center">
+  <img src="docs/screenshots/celulares.png" width="840" alt="Telas do BookLevel: início, biblioteca, progresso e perfil, nos temas escuro e claro">
+</p>
 
 ---
 
