@@ -36,3 +36,6 @@ yarn-error.*
 scripts/serviceAccount.json
 .env
 .env.local
+
+# Claude Code: permissões locais da máquina
+.claude/settings.local.json

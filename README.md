@@ -56,27 +56,30 @@ Trato isso como parte do meu processo de engenharia: as regras acima são decis�
 
 ## Estrutura do projeto
 
+```text
 src/
-config/firebase.js # init do Firebase + patch de persistência web/native
-context/
-AuthContext.jsx
-ThemeContext.jsx
-FriendshipContext.jsx
-navigation/
-RootNavigator.jsx
-AppNavigator.jsx
-AuthNavigator.jsx
-screens/
-home/ books/ progress/ ranking/ profile/ groups/ auth/
-services/ # toda a lógica de negócio isolada da UI
-userService.js readingService.js bookService.js achievementService.js
-friendshipService.js groupService.js chatService.js authService.js
-notificationService.js
-utils/
-levelSystem.js # fórmula de XP/nível
-xpCalculator.js
-constants/colors.js
+├── config/
+│   └── firebase.js            # init do Firebase + patch de persistência web/native
+├── context/
+│   ├── AuthContext.jsx
+│   ├── ThemeContext.jsx
+│   └── FriendshipContext.jsx
+├── navigation/
+│   ├── RootNavigator.jsx
+│   ├── AppNavigator.jsx
+│   └── AuthNavigator.jsx
+├── screens/                   # home, books, progress, ranking, profile, groups, auth
+├── services/                  # toda a lógica de negócio isolada da UI
+│   ├── userService.js         readingService.js      bookService.js
+│   ├── achievementService.js  friendshipService.js   groupService.js
+│   └── chatService.js         authService.js         notificationService.js
+├── utils/
+│   ├── levelSystem.js         # fórmula de XP/nível
+│   └── xpCalculator.js
+└── constants/
+    └── colors.js
 assets/
+```
 
 
 A separação `screens/` → `services/` → `Firestore` existe pra manter a UI sem regra de negócio. Exceção conhecida: a busca da Google Books API é chamada direto de três telas (`ProfileScreen`, `SetGoalScreen`, `BookListScreen`) em vez de passar por um service — ver roadmap.
@@ -86,13 +89,14 @@ A separação `screens/` → `services/` → `Firestore` existe pra manter a UI 
 **Pré-requisitos:** Node.js LTS, app Expo Go no celular, projeto próprio no Firebase (Authentication + Firestore habilitados) e uma chave da Google Books API.
 
 ```bash
-git clone https://github.com/wiegertluizghost/Book-Level.git
+git clone https://github.com/Luizwiegert/Book-Level.git
 cd Book-Level
 npm install
 ```
 
 Crie um `.env.local` na raiz (não versionado) com suas próprias credenciais:
 
+```env
 EXPO_PUBLIC_FIREBASE_API_KEY=
 EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=
 EXPO_PUBLIC_FIREBASE_PROJECT_ID=
@@ -100,6 +104,7 @@ EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=
 EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
 EXPO_PUBLIC_FIREBASE_APP_ID=
 EXPO_PUBLIC_GOOGLE_BOOKS_API_KEY=
+```
 
 
 ```bash
