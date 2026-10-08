@@ -1,5 +1,12 @@
 # 📚 BookLevel
 
+<p>
+<img src="https://img.shields.io/badge/Expo-SDK_54-000020?style=flat-square&logo=expo&logoColor=white" alt="Expo SDK 54">
+<img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native">
+<img src="https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=firebase&logoColor=white" alt="Firebase">
+<a href="LICENSE"><img src="https://img.shields.io/badge/licen%C3%A7a-MIT-8b949e?style=flat-square" alt="Licença MIT"></a>
+</p>
+
 Gamificação de hábitos de leitura em React Native — XP, níveis, streaks e grupos, com Firebase como backend.
 
 <p align="center">
